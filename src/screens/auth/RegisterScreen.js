@@ -11,6 +11,7 @@ const RegisterScreen = () => {
     let navigation = useNavigate();
     const [username, setusername] = useState('');
     const [password, setpassword] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -85,8 +86,8 @@ const RegisterScreen = () => {
                     value={username}
                     onChange={(e) => setusername(e.target.value)}
                 />
-                <CustomInputPass
-                    label='گذرواژه'
+                <CustomInput
+                    placeholder='گذرواژه'
                     value={password}
                     showPassword={true}
                     onClick={() => setShowPassword(!showPassword)}

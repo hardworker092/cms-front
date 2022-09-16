@@ -373,7 +373,7 @@ const ShowCustomer = () => {
                                             <td className="text-[.65rem]">{value.phone}</td>
                                             <td className="text-[.65rem]">{value.username}</td>
                                             <td className="text-[.65rem]">{value.gender == 1 ? "آقا" : "خانم"}</td>
-                                            <td className="text-[.65rem]">{convertAdminAccess(value.access)}</td>
+                                            <td className="text-[.65rem]">{convertAdminAccess(value.role)}</td>
                                             <td className="text-[.80rem] font-yRegular">{convertDate(value.created_at)}</td>
                                             <td className="text-[.80rem] font-yRegular">{convertDate(value.updated_at, true)}</td>
                                             <td>
