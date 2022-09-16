@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar {
+    @apply font-iran text-sm list-none
+    }
+    .navbar li {
+    @apply float-right ml-4
+  }
+  .checkbox {
+    @apply cursor-pointer
+  }
+  .tableFixHead thead{
+    @apply sticky top-0 h-12 bg-white
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+    li > p  {
+        @apply inline cursor-pointer hover:text-blue-800 hover:font-bold 
+    }
+    span {
+        @apply font-iran text-right text-xs block font-bold
+    }
+    table{
+        @apply w-full cursor-pointer bg-white
+    }
+    thead > tr > td {
+        @apply font-iran text-xs font-medium h-14  text-gray-500
+    }
+    td {
+        @apply text-black font-iran h-16 font-extrabold
+    }
+    tbody > tr{
+        @apply hover:bg-gradient-to-r from-white via-gray-200 to-white 
+    }
+}
+
+@font-face {
+    font-family: 'Aviny';
+    src: local('Aviny'), url(/assets/fonts/Aviny.woff) format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Iransanse';
+    src: local('Iransanse'), url(/assets/fonts/Iransanse.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'Regular';
+    src: local('Regular'), url(/assets/fonts/Yekan-Bakh-FaNum-04-Regular.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'ymedium';
+    src: local('ymedium'), url(/assets/fonts/Yekan-Bakh-FaNum-05-Medium.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'ybold';
+    src: local('ybold'), url(/assets/fonts/Yekan-Bakh-FaNum-06-Bold.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'yheavy';
+    src: local('yheavy'), url(/assets/fonts/Yekan-Bakh-FaNum-07-Heavy.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'yfat';
+    src: local('yfat'), url(/assets/fonts/Yekan-Bakh-FaNum-08-Fat.woff) format('woff')
 }
